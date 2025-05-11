@@ -164,9 +164,9 @@ public class CalculadoraView extends Frame{
 
     public void sumar(){
         double valor1 = Double.parseDouble(tf1.getText());
-        double valor2 = Double.parseDouble(tf2.getText());
-
         calculadora.setValor1(valor1);
+
+        double valor2 = Double.parseDouble(tf2.getText());
         calculadora.setValor2(valor2);
 
         double resultado = calculadora.sumar();
@@ -201,7 +201,7 @@ public class CalculadoraView extends Frame{
         calculadora.setValor2(num2);
 
         if (num2 != 0) {
-            double resultado = calculadora.dividir(); // asegúrate de tener este método en la clase Calculadora
+            double resultado = calculadora.dividir();
             tfresultado.setText(String.valueOf(resultado));
         } else {
             tfresultado.setText("Error: División por cero");
